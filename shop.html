@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<form id="shoplist" method="post" onsubmit="return false;">
+    <fieldset>
+        <legend><strong>Your Selections</strong></legend>     
+        <div>
+            <label>Fruits:</label>
+           
+				<select id="selectgroceryitem" name='grocery' onchange="calculateTotal()">
+                <option value="None">Select Item</option>
+                <option value="Milk">Milk($5)</option>
+                <option value="Egg">Egg($5)</option>
+                <option value="Bread">Bread($7)</option>
+                <option value="Apple">Apple($8)</option>
+                <option value="Raspberry">Raspberry($10)</option>
+                <option value="Pineapple">Pineapple($5)</option>
+                     
+               </select>
+               <input type="text" value="Quantity" size="8" id="qty">
+				<button type="button"  id="addtocart" onClick="calculateTotal()";">Add to Cart</button>
+                <button type="button"  id="viewCart" onClick="ViewCart();">View Cart</button>
+ 				<button type="button"  id="clear" onClick="ClearCart();">Clear</button>
+ 
+        </div>
+
+        <div id="totalPrice"> </div>
+    </fieldset>
+    <script type="text/javascript" src ="js/shopscript.js"></script>
+</body>
+</html>
